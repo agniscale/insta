@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AGNISCALE | SCALE ✧ STRATEGY ✧ SUCCESS</title>
+    <title>Agniscale | Scale ✧ Strategy ✧ Success</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -16,104 +15,115 @@
         }
         
         :root {
-            --neon-cyan: #00f7ff;
-            --neon-pink: #ff00ff;
-            --neon-purple: #9d00ff;
-            --neon-yellow: #ffff00;
-            --dark-bg: #0a0a0f;
+            --primary: #4f46e5;
+            --primary-light: #6366f1;
+            --secondary: #10b981;
+            --accent: #f59e0b;
+            --light-bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --border: #e2e8f0;
         }
         
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--dark-bg);
-            color: #fff;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
             overflow-x: hidden;
-            background: radial-gradient(ellipse at top, #0a0a0f 0%, #000000 70%);
-            position: relative;
         }
         
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 30%, rgba(0, 247, 255, 0.05) 0%, transparent 40%),
-                radial-gradient(circle at 80% 70%, rgba(255, 0, 255, 0.05) 0%, transparent 40%),
-                radial-gradient(circle at 40% 80%, rgba(157, 0, 255, 0.05) 0%, transparent 40%);
-            z-index: -1;
-            pointer-events: none;
-        }
-        
-        h1, h2, h3, h4, .logo-font {
+        h1, h2, h3, h4, h5, .logo-font {
             font-family: 'Montserrat', sans-serif;
-            font-weight: 900;
+            font-weight: 600;
         }
         
-        .neon-border {
-            border: 2px solid var(--neon-cyan);
-            box-shadow: 0 0 10px var(--neon-cyan), inset 0 0 10px var(--neon-cyan);
+        .curved-section {
+            border-radius: 32px;
         }
         
-        .neon-text {
-            color: var(--neon-cyan);
-            text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan);
+        .curved-card {
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
         }
         
-        .neon-pink-text {
-            color: var(--neon-pink);
-            text-shadow: 0 0 10px var(--neon-pink), 0 0 20px rgba(255, 0, 255, 0.5);
+        .curved-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
         }
         
-        .neon-purple-text {
-            color: var(--neon-purple);
-            text-shadow: 0 0 10px var(--neon-purple);
+        .section-padding {
+            padding: 80px 0;
+        }
+        
+        .container-padding {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        
+        @media (min-width: 768px) {
+            .section-padding {
+                padding: 100px 0;
+            }
+            
+            .container-padding {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .section-padding {
+                padding: 120px 0;
+            }
         }
         
         .gradient-text {
-            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-pink), var(--neon-purple));
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            background-size: 200% auto;
-            animation: gradientShift 3s ease-in-out infinite alternate;
         }
         
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 100% 50%; }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            border-radius: 50px;
+            padding: 14px 32px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(79, 70, 229, 0.2);
         }
         
-        .glow-box {
-            position: relative;
-            overflow: hidden;
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(79, 70, 229, 0.3);
         }
         
-        .glow-box::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            transition: 0.5s;
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border-radius: 50px;
+            padding: 14px 32px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
         
-        .glow-box:hover::before {
-            left: 100%;
-        }
-        
-        .pulse {
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(0, 247, 255, 0.7); }
-            70% { box-shadow: 0 0 0 20px rgba(0, 247, 255, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(0, 247, 255, 0); }
+        .btn-outline:hover {
+            background: rgba(79, 70, 229, 0.05);
+            transform: translateY(-2px);
         }
         
         .floating {
@@ -121,74 +131,125 @@
         }
         
         @keyframes floating {
-            0% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(1deg); }
-            100% { transform: translateY(0px) rotate(0deg); }
-        }
-        
-        .floating-fast {
-            animation: floatingFast 3s ease-in-out infinite;
-        }
-        
-        @keyframes floatingFast {
             0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+            50% { transform: translateY(-15px); }
             100% { transform: translateY(0px); }
         }
         
-        .matrix-bg {
-            background: linear-gradient(rgba(0, 247, 255, 0.03) 1px, transparent 1px),
-                        linear-gradient(90deg, rgba(0, 247, 255, 0.03) 1px, transparent 1px);
-            background-size: 30px 30px;
-        }
-        
-        .stagger-animation > * {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 0.8s forwards;
-        }
-        
-        .stagger-animation > *:nth-child(1) { animation-delay: 0.1s; }
-        .stagger-animation > *:nth-child(2) { animation-delay: 0.2s; }
-        .stagger-animation > *:nth-child(3) { animation-delay: 0.3s; }
-        .stagger-animation > *:nth-child(4) { animation-delay: 0.4s; }
-        .stagger-animation > *:nth-child(5) { animation-delay: 0.5s; }
-        
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .scan-line {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .scan-line::after {
-            content: '';
-            position: absolute;
+        .sticky-nav {
+            position: sticky;
             top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
-            animation: scan 3s linear infinite;
-        }
-        
-        @keyframes scan {
-            0% { top: 0; }
-            100% { top: 100%; }
-        }
-        
-        .hover-glow {
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
             transition: all 0.3s ease;
         }
         
-        .hover-glow:hover {
-            box-shadow: 0 0 30px rgba(0, 247, 255, 0.5);
-            transform: translateY(-5px);
+        .nav-scrolled {
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            background: rgba(255, 255, 255, 0.98);
+        }
+        
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 24px;
+            cursor: pointer;
+        }
+        
+        .hamburger span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background: var(--text-dark);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(8px, -8px);
+        }
+        
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 400px;
+            height: 100vh;
+            background: white;
+            z-index: 9999;
+            transition: right 0.4s ease;
+            box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
+            padding: 100px 40px 40px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .mobile-menu.active {
+            right: 0;
+        }
+        
+        .mobile-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+        
+        .icon-circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        
+        .icon-circle.primary {
+            background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(99, 102, 241, 0.1));
+            color: var(--primary);
+        }
+        
+        .icon-circle.secondary {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(34, 197, 94, 0.1));
+            color: var(--secondary);
+        }
+        
+        .icon-circle.accent {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(251, 191, 36, 0.1));
+            color: var(--accent);
         }
         
         .modal-overlay {
@@ -197,14 +258,15 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.9);
+            background: rgba(0, 0, 0, 0.5);
             display: flex;
             justify-content: center;
             align-items: center;
-            z-index: 9999;
+            z-index: 10000;
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s ease;
+            padding: 20px;
         }
         
         .modal-overlay.active {
@@ -213,283 +275,306 @@
         }
         
         .modal-content {
-            background: rgba(10, 10, 15, 0.95);
-            border: 2px solid var(--neon-cyan);
-            box-shadow: 0 0 50px rgba(0, 247, 255, 0.5);
-            border-radius: 20px;
+            background: white;
+            border-radius: 24px;
             padding: 40px;
-            max-width: 600px;
-            width: 90%;
-            transform: scale(0.8);
-            transition: transform 0.4s ease;
-            position: relative;
-            overflow: hidden;
+            max-width: 500px;
+            width: 100%;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
         }
         
         .modal-overlay.active .modal-content {
             transform: scale(1);
         }
         
-        .modal-content::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-pink), var(--neon-purple));
-        }
-        
-        .glitch-text {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .glitch-text::before,
-        .glitch-text::after {
-            content: attr(data-text);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        
-        .glitch-text::before {
-            animation: glitch-effect 3s infinite;
-            color: var(--neon-pink);
-            z-index: -1;
-        }
-        
-        .glitch-text::after {
-            animation: glitch-effect 2s infinite;
-            color: var(--neon-cyan);
-            z-index: -2;
-        }
-        
-        @keyframes glitch-effect {
-            0% { transform: translate(0); }
-            20% { transform: translate(-3px, 3px); }
-            40% { transform: translate(-3px, -3px); }
-            60% { transform: translate(3px, 3px); }
-            80% { transform: translate(3px, -3px); }
-            100% { transform: translate(0); }
-        }
-        
-        .particle {
-            position: absolute;
-            border-radius: 50%;
-            background: var(--neon-cyan);
-            opacity: 0.7;
-            z-index: -1;
-        }
-        
-        .cyber-grid {
-            background-size: 50px 50px;
-            background-image: 
-                linear-gradient(to right, rgba(0, 247, 255, 0.1) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(0, 247, 255, 0.1) 1px, transparent 1px);
-        }
-        
-        .typewriter {
-            overflow: hidden;
-            border-right: 3px solid var(--neon-cyan);
-            white-space: nowrap;
-            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-        }
-        
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-        
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: var(--neon-cyan) }
-        }
-        
-        .sticky-nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(10px);
-            background: rgba(10, 10, 15, 0.8);
-            border-bottom: 1px solid rgba(0, 247, 255, 0.2);
-        }
-        
         .scroll-to-top {
             position: fixed;
             bottom: 30px;
-            right: 30px;
-            z-index: 100;
+            right: 20px;
+            z-index: 99;
             opacity: 0;
-            transition: opacity 0.3s ease;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: white;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            border: 1px solid var(--border);
         }
         
         .scroll-to-top.visible {
             opacity: 1;
+            visibility: visible;
         }
         
-        .logo-glow {
-            filter: drop-shadow(0 0 10px var(--neon-cyan)) drop-shadow(0 0 20px rgba(0, 247, 255, 0.5));
+        .scroll-to-top:hover {
+            background: var(--primary);
+            color: white;
         }
         
-        .btn-explosion {
-            position: relative;
-            overflow: hidden;
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 24px;
         }
         
-        .btn-explosion::after {
-            content: '';
+        .service-icon.primary {
+            background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(99, 102, 241, 0.1));
+            color: var(--primary);
+        }
+        
+        .service-icon.secondary {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(34, 197, 94, 0.1));
+            color: var(--secondary);
+        }
+        
+        .service-icon.accent {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(251, 191, 36, 0.1));
+            color: var(--accent);
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border);
+            height: 100%;
+        }
+        
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 16px 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background: white;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+        }
+        
+        .form-textarea {
+            width: 100%;
+            padding: 16px 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background: white;
+            transition: all 0.3s ease;
+            min-height: 150px;
+            resize: vertical;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+        }
+        
+        .hero-shape {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 5px;
-            height: 5px;
-            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        
+        .hero-shape-1 {
+            width: 300px;
+            height: 300px;
+            background: var(--primary);
+            top: 10%;
+            left: 10%;
+        }
+        
+        .hero-shape-2 {
+            width: 200px;
+            height: 200px;
+            background: var(--secondary);
+            bottom: 10%;
+            right: 10%;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-shape {
+                display: none;
+            }
+        }
+        
+        .fade-in {
             opacity: 0;
-            border-radius: 100%;
-            transform: scale(1, 1) translate(-50%);
-            transform-origin: 50% 50%;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
         }
         
-        .btn-explosion:focus:not(:active)::after {
-            animation: explosion 0.5s ease-out;
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
         
-        @keyframes explosion {
-            0% {
-                opacity: 1;
-                transform: scale(0, 0) translate(-50%);
-            }
-            100% {
-                opacity: 0;
-                transform: scale(50, 50) translate(-50%);
-            }
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 2px solid var(--border);
         }
     </style>
 </head>
-<body class="cyber-grid">
-    <!-- Particles Background -->
-    <div id="particles-container"></div>
+<body class="antialiased">
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="flex flex-col space-y-8">
+            <a href="#home" class="text-2xl font-semibold text-gray-800 hover:text-primary transition-colors" onclick="closeMobileMenu()">Home</a>
+            <a href="#services" class="text-2xl font-semibold text-gray-800 hover:text-primary transition-colors" onclick="closeMobileMenu()">Services</a>
+            <a href="#about" class="text-2xl font-semibold text-gray-800 hover:text-primary transition-colors" onclick="closeMobileMenu()">About</a>
+            <a href="#contact" class="text-2xl font-semibold text-gray-800 hover:text-primary transition-colors" onclick="closeMobileMenu()">Contact</a>
+            <a href="https://www.instagram.com/agniscale/" target="_blank" class="mt-8 btn-primary">
+                <i class="fab fa-instagram mr-3"></i> Follow on Instagram
+            </a>
+        </div>
+    </div>
     
     <!-- Navigation -->
-    <nav class="sticky-nav py-4">
-        <div class="container mx-auto px-6">
+    <nav class="sticky-nav py-4" id="navbar">
+        <div class="container mx-auto container-padding">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-4">
-                    <div class="relative">
-                        <img src="https://d1yei2z3i6k35z.cloudfront.net/13184094/693dc7fb18258_unnamed2.jpg" 
-                             alt="Agniscale Logo" 
-                             class="w-14 h-14 rounded-full border-2 border-neon-cyan logo-glow pulse floating-fast">
-                        <div class="absolute -top-1 -right-1 w-5 h-5 bg-neon-pink rounded-full animate-ping"></div>
-                    </div>
+                    <img src="https://d1yei2z3i6k35z.cloudfront.net/13184094/693dc7fb18258_unnamed2.jpg" 
+                         alt="Agniscale Logo" 
+                         class="logo-img">
                     <div>
-                        <h1 class="text-3xl font-bold logo-font neon-text">AGNI<span class="neon-pink-text">SCALE</span></h1>
-                        <p class="text-xs text-cyan-300 tracking-widest">MARKETING & ADVERTISING AGENCY</p>
+                        <h1 class="text-2xl font-bold logo-font gradient-text">AGNISCALE</h1>
+                        <p class="text-xs text-gray-500">Marketing & Advertising Agency</p>
                     </div>
                 </div>
                 
+                <!-- Desktop Navigation -->
                 <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="hover-glow text-white hover:text-neon-cyan transition-colors font-bold text-lg relative group">
-                        <span class="relative z-10">HOME</span>
-                        <span class="absolute bottom-0 left-0 w-0 h-1 bg-neon-cyan group-hover:w-full transition-all duration-300"></span>
-                    </a>
-                    <a href="#services" class="hover-glow text-white hover:text-neon-cyan transition-colors font-bold text-lg relative group">
-                        <span class="relative z-10">SERVICES</span>
-                        <span class="absolute bottom-0 left-0 w-0 h-1 bg-neon-pink group-hover:w-full transition-all duration-300"></span>
-                    </a>
-                    <a href="#about" class="hover-glow text-white hover:text-neon-cyan transition-colors font-bold text-lg relative group">
-                        <span class="relative z-10">ABOUT</span>
-                        <span class="absolute bottom-0 left-0 w-0 h-1 bg-neon-purple group-hover:w-full transition-all duration-300"></span>
-                    </a>
-                    <a href="#contact" class="hover-glow text-white hover:text-neon-cyan transition-colors font-bold text-lg relative group">
-                        <span class="relative z-10">CONTACT</span>
-                        <span class="absolute bottom-0 left-0 w-0 h-1 bg-neon-yellow group-hover:w-full transition-all duration-300"></span>
+                    <a href="#home" class="font-medium text-gray-700 hover:text-primary transition-colors">Home</a>
+                    <a href="#services" class="font-medium text-gray-700 hover:text-primary transition-colors">Services</a>
+                    <a href="#about" class="font-medium text-gray-700 hover:text-primary transition-colors">About</a>
+                    <a href="#contact" class="font-medium text-gray-700 hover:text-primary transition-colors">Contact</a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="https://www.instagram.com/agniscale/" target="_blank" class="btn-primary">
+                        <i class="fab fa-instagram mr-2"></i> Follow Us
                     </a>
                 </div>
                 
-                <a href="https://www.instagram.com/agniscale/" target="_blank" class="btn-explosion bg-gradient-to-r from-cyan-500 to-pink-500 text-white px-6 py-3 rounded-full font-bold hover:shadow-[0_0_30px_rgba(255,0,255,0.7)] transition-all duration-300 relative overflow-hidden group">
-                    <span class="relative z-10">FOLLOW US</span>
-                    <div class="absolute inset-0 bg-gradient-to-r from-cyan-600 to-pink-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                </a>
+                <!-- Mobile Hamburger -->
+                <div class="md:hidden">
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
     
     <!-- Hero Section -->
-    <section id="home" class="pt-24 pb-32 px-6 relative overflow-hidden scan-line">
-        <div class="absolute top-10 left-10 w-72 h-72 bg-neon-cyan rounded-full mix-blend-screen opacity-10 blur-3xl"></div>
-        <div class="absolute bottom-10 right-10 w-96 h-96 bg-neon-pink rounded-full mix-blend-screen opacity-10 blur-3xl"></div>
+    <section id="home" class="section-padding relative overflow-hidden">
+        <div class="hero-shape hero-shape-1 floating"></div>
+        <div class="hero-shape hero-shape-2 floating" style="animation-delay: 2s;"></div>
         
-        <div class="container mx-auto relative z-10">
-            <div class="flex flex-col lg:flex-row items-center justify-between stagger-animation">
-                <div class="lg:w-1/2 mb-16 lg:mb-0">
-                    <div class="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-cyan-900/30 to-pink-900/30 border border-cyan-500/30 mb-6">
-                        <span class="text-sm font-bold tracking-widest gradient-text">GEN-Z OWNED AGENCY</span>
+        <div class="container mx-auto container-padding">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-16 lg:mb-0 fade-in">
+                    <div class="inline-flex items-center px-4 py-2 rounded-full bg-blue-50 text-primary font-medium mb-6">
+                        <span class="w-2 h-2 bg-primary rounded-full mr-2"></span>
+                        Gen-Z Owned Agency
                     </div>
                     
-                    <h2 class="text-6xl md:text-8xl font-bold mb-8 leading-tight">
-                        <span class="block glitch-text" data-text="SCALE">SCALE</span>
-                        <span class="block glitch-text neon-pink-text ml-10" data-text="STRATEGY">STRATEGY</span>
-                        <span class="block glitch-text neon-purple-text ml-20" data-text="SUCCESS">SUCCESS</span>
-                    </h2>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-8 leading-tight">
+                        <span class="gradient-text">Scale</span> ✧ 
+                        <span class="gradient-text">Strategy</span> ✧ 
+                        <span class="gradient-text">Success</span>
+                    </h1>
                     
-                    <p class="text-2xl text-gray-300 mb-10 max-w-2xl">
-                        We're the <span class="gradient-text font-bold">KHTARNAK</span> marketing force that transforms brands into digital legends. Get ready for the glow up.
+                    <p class="text-xl text-gray-600 mb-10 max-w-2xl">
+                        We help brands glow up, get more sales/leads, and achieve high-quality growth with good quantity. Online-based, future-focused.
                     </p>
                     
-                    <div class="flex flex-wrap gap-6">
-                        <a href="#contact" class="btn-explosion bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-10 py-5 rounded-full text-xl font-bold hover:shadow-[0_0_40px_rgba(0,247,255,0.7)] transition-all duration-300 transform hover:scale-105 relative overflow-hidden group">
-                            <span class="relative z-10">START YOUR GLOW UP</span>
-                            <div class="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-700 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="btn-primary">
+                            Start Your Glow Up
                         </a>
-                        <a href="#services" class="border-2 border-cyan-400 text-cyan-300 px-10 py-5 rounded-full text-xl font-bold hover:bg-cyan-400/10 hover:shadow-[0_0_30px_rgba(0,247,255,0.5)] transition-all duration-300">
-                            EXPLORE SERVICES
+                        <a href="#services" class="btn-outline">
+                            Explore Services
                         </a>
                     </div>
                     
-                    <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div class="bg-black/40 backdrop-blur-sm rounded-2xl p-6 border border-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300">
-                            <div class="text-4xl font-bold gradient-text mb-2">+125%</div>
-                            <p class="text-gray-300">Average Client Growth</p>
+                    <div class="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6">
+                        <div class="stat-card">
+                            <div class="text-3xl font-bold text-primary mb-2">+125%</div>
+                            <p class="text-gray-600">Average Client Growth</p>
                         </div>
-                        <div class="bg-black/40 backdrop-blur-sm rounded-2xl p-6 border border-pink-500/20 hover:border-pink-500/50 transition-all duration-300">
-                            <div class="text-4xl font-bold gradient-text mb-2">24/7</div>
-                            <p class="text-gray-300">Online Operations</p>
+                        <div class="stat-card">
+                            <div class="text-3xl font-bold text-secondary mb-2">24/7</div>
+                            <p class="text-gray-600">Online Operations</p>
                         </div>
-                        <div class="bg-black/40 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/20 hover:border-purple-500/50 transition-all duration-300">
-                            <div class="text-4xl font-bold gradient-text mb-2">100%</div>
-                            <p class="text-gray-300">Gen-Z Power</p>
+                        <div class="stat-card">
+                            <div class="text-3xl font-bold text-accent mb-2">100%</div>
+                            <p class="text-gray-600">Gen-Z Power</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="lg:w-1/2 flex justify-center">
+                <div class="lg:w-1/2 flex justify-center fade-in">
                     <div class="relative">
-                        <div class="w-96 h-96 relative floating">
-                            <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-pink-500/20 rounded-full blur-xl"></div>
-                            <div class="absolute inset-8 bg-gradient-to-tr from-cyan-500/30 to-purple-500/30 rounded-full blur-lg"></div>
-                            <div class="relative w-full h-full bg-gradient-to-br from-cyan-900/30 to-pink-900/30 rounded-full border-2 border-cyan-500/30 flex items-center justify-center">
+                        <div class="w-80 h-80 md:w-96 md:h-96 relative">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-emerald-50 rounded-full"></div>
+                            <div class="relative w-full h-full bg-white rounded-full border-8 border-white shadow-2xl flex items-center justify-center overflow-hidden">
                                 <div class="text-center p-8">
-                                    <div class="text-7xl font-bold mb-6">
-                                        <span class="gradient-text typewriter">GLOW UP</span>
+                                    <div class="text-5xl md:text-6xl font-bold mb-6">
+                                        <span class="gradient-text">GLOW UP</span>
                                     </div>
-                                    <p class="text-xl text-gray-300">Get More Sales/Leads</p>
-                                    <p class="text-xl text-gray-300 mt-2">High Quality with Good Quantity</p>
+                                    <p class="text-lg text-gray-600">Get More Sales/Leads</p>
+                                    <p class="text-lg text-gray-600 mt-2">High Quality with Good Quantity</p>
                                 </div>
                             </div>
                         </div>
                         
-                        <!-- Floating elements -->
-                        <div class="absolute -top-6 left-0 bg-gradient-to-r from-cyan-500 to-cyan-700 text-black px-6 py-3 rounded-full font-bold shadow-lg shadow-cyan-500/50 floating-fast">
-                            ✦ GLOW UP
+                        <!-- Floating badges -->
+                        <div class="absolute -top-4 left-0 bg-white px-6 py-3 rounded-full shadow-lg font-medium border border-gray-100">
+                            ✦ Brand Building
                         </div>
-                        <div class="absolute -bottom-6 right-0 bg-gradient-to-r from-pink-500 to-pink-700 text-white px-6 py-3 rounded-full font-bold shadow-lg shadow-pink-500/50 floating-fast">
-                            ✦ MORE SALES
+                        <div class="absolute -bottom-4 right-0 bg-white px-6 py-3 rounded-full shadow-lg font-medium border border-gray-100">
+                            ✦ More Sales
                         </div>
-                        <div class="absolute top-1/2 -left-6 bg-gradient-to-r from-purple-500 to-purple-700 text-white px-6 py-3 rounded-full font-bold shadow-lg shadow-purple-500/50 floating-fast">
-                            ✦ HIGH QUALITY
+                        <div class="absolute top-1/2 -left-4 bg-white px-6 py-3 rounded-full shadow-lg font-medium border border-gray-100">
+                            ✦ Automation
                         </div>
                     </div>
                 </div>
@@ -498,119 +583,110 @@
     </section>
     
     <!-- Services Section -->
-    <section id="services" class="py-24 px-6 relative overflow-hidden">
-        <div class="absolute inset-0 matrix-bg"></div>
-        
-        <div class="container mx-auto relative z-10">
-            <div class="text-center mb-20">
-                <h2 class="text-5xl md:text-6xl font-bold mb-8">
-                    <span class="gradient-text">OUR SERVICES</span>
-                </h2>
-                <p class="text-2xl text-gray-300 max-w-3xl mx-auto">
-                    We provide <span class="neon-text font-bold">KHTARNAK</span> marketing solutions that blow the competition away.
+    <section id="services" class="section-padding bg-gray-50">
+        <div class="container mx-auto container-padding">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Our <span class="gradient-text">Services</span></h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We provide comprehensive marketing solutions tailored for the digital age. From brand building to automation setups.
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-animation">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Service Card 1 -->
-                <div class="glow-box bg-black/50 backdrop-blur-sm rounded-3xl p-8 border border-cyan-500/30 hover-glow hover:border-cyan-500 transition-all duration-300">
-                    <div class="text-cyan-400 text-5xl mb-6">
-                        <i class="fas fa-fire fa-beat"></i>
+                <div class="curved-card p-8 fade-in">
+                    <div class="service-icon primary">
+                        <i class="fas fa-fire"></i>
                     </div>
-                    <h3 class="text-3xl font-bold mb-4 neon-text">BRAND BUILDING</h3>
-                    <p class="text-gray-300 mb-6">We don't just build brands, we create legends that dominate the digital space.</p>
+                    <h3 class="text-2xl font-bold mb-4">Brand Building</h3>
+                    <p class="text-gray-600 mb-6">We help create and elevate brands that stand out in crowded markets with unique identity and storytelling.</p>
                     <ul class="space-y-3">
                         <li class="flex items-center">
-                            <i class="fas fa-bolt text-cyan-400 mr-3"></i>
-                            <span class="text-gray-300">Brand Identity Development</span>
+                            <i class="fas fa-check text-primary mr-3"></i>
+                            <span>Brand Identity Development</span>
                         </li>
                         <li class="flex items-center">
-                            <i class="fas fa-bolt text-cyan-400 mr-3"></i>
-                            <span class="text-gray-300">Visual & Verbal Identity</span>
+                            <i class="fas fa-check text-primary mr-3"></i>
+                            <span>Visual & Verbal Identity</span>
                         </li>
                         <li class="flex items-center">
-                            <i class="fas fa-bolt text-cyan-400 mr-3"></i>
-                            <span class="text-gray-300">Brand Strategy & Positioning</span>
+                            <i class="fas fa-check text-primary mr-3"></i>
+                            <span>Brand Strategy & Positioning</span>
                         </li>
                     </ul>
-                    <div class="mt-8 pt-6 border-t border-cyan-500/20">
-                        <span class="text-sm text-cyan-300 font-bold">KHTARNAK LEVEL: <span class="text-yellow-400">★★★★★</span></span>
-                    </div>
                 </div>
                 
                 <!-- Service Card 2 -->
-                <div class="glow-box bg-black/50 backdrop-blur-sm rounded-3xl p-8 border border-pink-500/30 hover-glow hover:border-pink-500 transition-all duration-300">
-                    <div class="text-pink-400 text-5xl mb-6">
-                        <i class="fas fa-bullhorn fa-shake"></i>
+                <div class="curved-card p-8 fade-in">
+                    <div class="service-icon secondary">
+                        <i class="fas fa-bullhorn"></i>
                     </div>
-                    <h3 class="text-3xl font-bold mb-4 neon-pink-text">MARKETING & ADS</h3>
-                    <p class="text-gray-300 mb-6">Data-driven campaigns that hit harder than a viral trend. We make noise that converts.</p>
+                    <h3 class="text-2xl font-bold mb-4">Marketing & Advertising</h3>
+                    <p class="text-gray-600 mb-6">Data-driven campaigns across all digital platforms to maximize reach, engagement, and conversions.</p>
                     <ul class="space-y-3">
                         <li class="flex items-center">
-                            <i class="fas fa-bolt text-pink-400 mr-3"></i>
-                            <span class="text-gray-300">Social Media Marketing</span>
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span>Social Media Marketing</span>
                         </li>
                         <li class="flex items-center">
-                            <i class="fas fa-bolt text-pink-400 mr-3"></i>
-                            <span class="text-gray-300">Performance Advertising</span>
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span>Performance Advertising</span>
                         </li>
                         <li class="flex items-center">
-                            <i class="fas fa-bolt text-pink-400 mr-3"></i>
-                            <span class="text-gray-300">Content Strategy</span>
+                            <i class="fas fa-check text-secondary mr-3"></i>
+                            <span>Content Strategy</span>
                         </li>
                     </ul>
-                    <div class="mt-8 pt-6 border-t border-pink-500/20">
-                        <span class="text-sm text-pink-300 font-bold">KHTARNAK LEVEL: <span class="text-yellow-400">★★★★★</span></span>
-                    </div>
                 </div>
                 
                 <!-- Service Card 3 -->
-                <div class="glow-box bg-black/50 backdrop-blur-sm rounded-3xl p-8 border border-purple-500/30 hover-glow hover:border-purple-500 transition-all duration-300">
-                    <div class="text-purple-400 text-5xl mb-6">
-                        <i class="fas fa-robot fa-spin"></i>
+                <div class="curved-card p-8 fade-in">
+                    <div class="service-icon accent">
+                        <i class="fas fa-robot"></i>
                     </div>
-                    <h3 class="text-3xl font-bold mb-4 neon-purple-text">AUTOMATION SETUP</h3>
-                    <p class="text-gray-300 mb-6">Set your business on autopilot with systems that work 24/7 while you sleep. Future-proof your ops.</p>
+                    <h3 class="text-2xl font-bold mb-4">Automation Setup</h3>
+                    <p class="text-gray-600 mb-6">Streamline your operations with customized automation systems that save time and increase efficiency.</p>
                     <ul class="space-y-3">
                         <li class="flex items-center">
-                            <i class="fas fa-bolt text-purple-400 mr-3"></i>
-                            <span class="text-gray-300">Workflow Automation</span>
+                            <i class="fas fa-check text-accent mr-3"></i>
+                            <span>Workflow Automation</span>
                         </li>
                         <li class="flex items-center">
-                            <i class="fas fa-bolt text-purple-400 mr-3"></i>
-                            <span class="text-gray-300">CRM Integration</span>
+                            <i class="fas fa-check text-accent mr-3"></i>
+                            <span>CRM Integration</span>
                         </li>
                         <li class="flex items-center">
-                            <i class="fas fa-bolt text-purple-400 mr-3"></i>
-                            <span class="text-gray-300">Marketing Automation</span>
+                            <i class="fas fa-check text-accent mr-3"></i>
+                            <span>Marketing Automation</span>
                         </li>
                     </ul>
-                    <div class="mt-8 pt-6 border-t border-purple-500/20">
-                        <span class="text-sm text-purple-300 font-bold">KHTARNAK LEVEL: <span class="text-yellow-400">★★★★★</span></span>
-                    </div>
                 </div>
             </div>
             
             <!-- Something Similar Section -->
-            <div class="mt-24">
-                <h3 class="text-4xl font-bold text-center mb-12">
-                    AND <span class="gradient-text">SOMETHING SIMILAR</span>...
-                </h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 stagger-animation">
-                    <div class="glow-box bg-gradient-to-br from-cyan-900/20 to-transparent rounded-3xl p-8 border border-cyan-500/30 hover:border-cyan-500 transition-all duration-300">
-                        <h4 class="text-2xl font-bold mb-4 neon-text">INFLUENCER COLLABS</h4>
-                        <p class="text-gray-300">We connect you with the right digital creators who can amplify your brand to their loyal followers.</p>
-                        <div class="mt-6 inline-flex items-center text-cyan-300 font-bold">
-                            <span>POWER MOVE</span>
-                            <i class="fas fa-arrow-right ml-3"></i>
+            <div class="mt-20 fade-in">
+                <h3 class="text-3xl font-bold text-center mb-12">And <span class="gradient-text">Something Similar</span>...</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="curved-card p-8">
+                        <div class="flex items-start">
+                            <div class="icon-circle primary mr-6">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-3">Influencer Collaborations</h4>
+                                <p class="text-gray-600">Leverage authentic influencer partnerships to reach target audiences with trusted voices in your niche.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="glow-box bg-gradient-to-br from-pink-900/20 to-transparent rounded-3xl p-8 border border-pink-500/30 hover:border-pink-500 transition-all duration-300">
-                        <h4 class="text-2xl font-bold mb-4 neon-pink-text">ANALYTICS & INSIGHTS</h4>
-                        <p class="text-gray-300">We don't guess, we know. Data-driven insights that reveal exactly what your audience wants.</p>
-                        <div class="mt-6 inline-flex items-center text-pink-300 font-bold">
-                            <span>BRAIN POWER</span>
-                            <i class="fas fa-arrow-right ml-3"></i>
+                    <div class="curved-card p-8">
+                        <div class="flex items-start">
+                            <div class="icon-circle secondary mr-6">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-3">Analytics & Insights</h4>
+                                <p class="text-gray-600">Data-driven decision making with comprehensive analytics and actionable insights for continuous growth.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -619,78 +695,94 @@
     </section>
     
     <!-- About Section -->
-    <section id="about" class="py-24 px-6 relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 via-pink-500 to-purple-500"></div>
-        
-        <div class="container mx-auto">
-            <div class="flex flex-col lg:flex-row items-center gap-16 stagger-animation">
-                <div class="lg:w-1/2">
-                    <div class="glow-box bg-black/50 backdrop-blur-sm rounded-3xl p-10 border border-cyan-500/30 relative overflow-hidden">
-                        <div class="absolute -top-10 -right-10 w-60 h-60 bg-cyan-500/10 rounded-full blur-2xl"></div>
-                        <div class="absolute -bottom-10 -left-10 w-60 h-60 bg-pink-500/10 rounded-full blur-2xl"></div>
-                        
-                        <h2 class="text-5xl font-bold mb-8">
-                            ABOUT <span class="gradient-text">AGNISCALE</span>
-                        </h2>
-                        <p class="text-xl text-gray-300 mb-8">
-                            We're not your grandma's marketing agency. We're a <span class="neon-text font-bold">Gen-Z digital powerhouse</span> that speaks the language of the internet. We understand trends before they're trends and build brands that people actually care about.
+    <section id="about" class="section-padding">
+        <div class="container mx-auto container-padding">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2 fade-in">
+                    <div class="curved-card p-10 relative overflow-hidden">
+                        <h2 class="text-4xl font-bold mb-8">About <span class="gradient-text">Agniscale</span></h2>
+                        <p class="text-lg text-gray-600 mb-6">
+                            We're a forward-thinking marketing agency led by Gen-Z visionaries who understand the digital landscape like no other. Our approach blends creativity with data, tradition with innovation.
                         </p>
-                        <p class="text-xl text-gray-300 mb-8">
-                            Operating 100% online, we break geographical barriers to deliver <span class="neon-pink-text font-bold">KHTARNAK results</span> that scale your business into the stratosphere.
+                        <p class="text-lg text-gray-600 mb-8">
+                            Operating entirely online, we break geographical barriers to help brands scale strategically and achieve sustainable success.
                         </p>
                         
-                        <div class="flex items-center mt-12">
-                            <div class="relative">
+                        <div class="flex items-center mt-10 pt-8 border-t border-gray-100">
+                            <div class="w-16 h-16 rounded-full border-4 border-white overflow-hidden mr-6 shadow-md">
                                 <img src="https://d1yei2z3i6k35z.cloudfront.net/13184094/693dc7fb18258_unnamed2.jpg" 
-                                     alt="Owner" 
-                                     class="w-20 h-20 rounded-full border-4 border-cyan-400 object-cover pulse">
-                                <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-gradient-to-r from-cyan-500 to-pink-500 rounded-full flex items-center justify-center">
-                                    <i class="fas fa-bolt text-white text-sm"></i>
-                                </div>
+                                     alt="Owner" class="w-full h-full object-cover">
                             </div>
-                            <div class="ml-6">
-                                <h4 class="text-2xl font-bold gradient-text">AGNISCALE AS</h4>
-                                <p class="text-cyan-300 font-bold">OWNER & GEN-Z VISIONARY</p>
+                            <div>
+                                <h4 class="text-xl font-bold">AgniScale AS</h4>
+                                <p class="text-primary font-medium">Owner & Gen-Z Visionary</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="lg:w-1/2">
-                    <div class="glow-box bg-black/50 backdrop-blur-sm rounded-3xl p-10 border border-gray-800">
-                        <h3 class="text-4xl font-bold mb-10 text-center">
-                            OUR <span class="gradient-text">PROMISE</span>
-                        </h3>
+                <div class="lg:w-1/2 fade-in">
+                    <h3 class="text-3xl font-bold mb-12 text-center lg:text-left">Our <span class="gradient-text">Promise</span></h3>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-start">
+                            <div class="icon-circle primary mr-6">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-3">Scale Exponentially</h4>
+                                <p class="text-gray-600">We don't just aim for growth; we engineer exponential scaling through strategic planning and execution.</p>
+                            </div>
+                        </div>
                         
-                        <div class="space-y-10">
-                            <div class="flex items-start">
-                                <div class="bg-gradient-to-br from-cyan-500/30 to-cyan-700/30 p-4 rounded-2xl mr-6">
-                                    <i class="fas fa-rocket text-cyan-400 text-2xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-2xl font-bold mb-3 neon-text">SCALE EXPONENTIALLY</h4>
-                                    <p class="text-gray-300">We engineer growth that doesn't just climb - it skyrockets. Get ready for hockey stick graphs.</p>
-                                </div>
+                        <div class="flex items-start">
+                            <div class="icon-circle secondary mr-6">
+                                <i class="fas fa-lightbulb"></i>
                             </div>
-                            
-                            <div class="flex items-start">
-                                <div class="bg-gradient-to-br from-pink-500/30 to-pink-700/30 p-4 rounded-2xl mr-6">
-                                    <i class="fas fa-chess-queen text-pink-400 text-2xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-2xl font-bold mb-3 neon-pink-text">STRATEGIC INNOVATION</h4>
-                                    <p class="text-gray-300">Every move is calculated. We play 4D chess while others are playing checkers.</p>
-                                </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-3">Strategic Innovation</h4>
+                                <p class="text-gray-600">Every campaign is backed by data-driven strategies tailored to your unique market position and goals.</p>
                             </div>
-                            
-                            <div class="flex items-start">
-                                <div class="bg-gradient-to-br from-purple-500/30 to-purple-700/30 p-4 rounded-2xl mr-6">
-                                    <i class="fas fa-trophy text-purple-400 text-2xl"></i>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="icon-circle accent mr-6">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-3">Measurable Success</h4>
+                                <p class="text-gray-600">We define clear KPIs and deliver tangible results that impact your bottom line and brand equity.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonials -->
+                    <div class="mt-16">
+                        <h4 class="text-2xl font-bold mb-8 text-center lg:text-left">What Clients Say</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="testimonial-card">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-primary font-bold mr-4">
+                                        A
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold">Alex Johnson</h5>
+                                        <p class="text-sm text-gray-500">E-commerce Brand</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h4 class="text-2xl font-bold mb-3 neon-purple-text">MEASURABLE SUCCESS</h4>
-                                    <p class="text-gray-300">We don't do vague promises. We deliver tangible, trackable results that impact your bottom line.</p>
+                                <p class="text-gray-600">"Agniscale transformed our online presence. Sales up 300% in 3 months!"</p>
+                            </div>
+                            <div class="testimonial-card">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-secondary font-bold mr-4">
+                                        S
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold">Sam Rivera</h5>
+                                        <p class="text-sm text-gray-500">Startup Founder</p>
+                                    </div>
                                 </div>
+                                <p class="text-gray-600">"Their Gen-Z approach gave us the edge we needed. Highly recommended!"</p>
                             </div>
                         </div>
                     </div>
@@ -700,82 +792,73 @@
     </section>
     
     <!-- Contact Section -->
-    <section id="contact" class="py-24 px-6 relative overflow-hidden">
-        <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500"></div>
-        
-        <div class="container mx-auto">
-            <div class="text-center mb-20 stagger-animation">
-                <h2 class="text-5xl md:text-6xl font-bold mb-10">
-                    READY FOR <span class="gradient-text">KHTARNAK GROWTH</span>?
-                </h2>
-                <p class="text-2xl text-gray-300 max-w-2xl mx-auto">
-                    Let's turn your brand into a digital legend. The future is waiting.
-                </p>
+    <section id="contact" class="section-padding bg-gray-50">
+        <div class="container mx-auto container-padding">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to <span class="gradient-text">Glow Up</span>?</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Let's transform your brand's digital presence. Get in touch for a consultation.</p>
             </div>
             
-            <div class="max-w-6xl mx-auto stagger-animation">
-                <div class="glow-box bg-gradient-to-br from-black/60 to-gray-900/60 backdrop-blur-sm rounded-3xl p-10 md:p-14 border border-cyan-500/30 hover:border-cyan-500 transition-all duration-300">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-14">
+            <div class="max-w-4xl mx-auto fade-in">
+                <div class="curved-card p-8 md:p-12">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                         <div>
-                            <h3 class="text-4xl font-bold mb-8 neon-text">CONNECT WITH US</h3>
-                            <p class="text-xl text-gray-300 mb-10">
-                                We're an online-based agency serving clients globally. No borders, just results.
-                            </p>
+                            <h3 class="text-3xl font-bold mb-8">Connect With Us</h3>
+                            <p class="text-gray-600 mb-10">We're an online-based agency serving clients globally. Reach out through any of these channels.</p>
                             
                             <div class="space-y-8">
                                 <div class="flex items-center">
-                                    <div class="bg-gradient-to-r from-cyan-500/20 to-cyan-700/20 p-4 rounded-2xl mr-6">
-                                        <i class="fab fa-instagram text-cyan-300 text-2xl"></i>
+                                    <div class="icon-circle primary mr-6">
+                                        <i class="fab fa-instagram"></i>
                                     </div>
                                     <div>
-                                        <p class="font-bold text-xl">INSTAGRAM</p>
-                                        <a href="https://www.instagram.com/agniscale/" target="_blank" class="text-cyan-300 hover:text-cyan-200 text-lg hover:underline">@agniscale</a>
+                                        <p class="font-bold text-lg">Instagram</p>
+                                        <a href="https://www.instagram.com/agniscale/" target="_blank" class="text-primary hover:underline">@agniscale</a>
                                     </div>
                                 </div>
                                 
                                 <div class="flex items-center">
-                                    <div class="bg-gradient-to-r from-pink-500/20 to-pink-700/20 p-4 rounded-2xl mr-6">
-                                        <i class="fas fa-globe-americas text-pink-300 text-2xl"></i>
+                                    <div class="icon-circle secondary mr-6">
+                                        <i class="fas fa-globe"></i>
                                     </div>
                                     <div>
-                                        <p class="font-bold text-xl">LOCATION</p>
-                                        <p class="text-gray-300 text-lg">Online • Worldwide • 24/7</p>
+                                        <p class="font-bold text-lg">Location</p>
+                                        <p class="text-gray-600">Online • Worldwide</p>
                                     </div>
                                 </div>
                                 
                                 <div class="flex items-center">
-                                    <div class="bg-gradient-to-r from-purple-500/20 to-purple-700/20 p-4 rounded-2xl mr-6">
-                                        <i class="fas fa-crown text-purple-300 text-2xl"></i>
+                                    <div class="icon-circle accent mr-6">
+                                        <i class="fas fa-user"></i>
                                     </div>
                                     <div>
-                                        <p class="font-bold text-xl">LEADERSHIP</p>
-                                        <p class="text-gray-300 text-lg">Gen-Z Owned & Operated</p>
+                                        <p class="font-bold text-lg">Leadership</p>
+                                        <p class="text-gray-600">Gen-Z Owned & Operated</p>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="mt-14 pt-10 border-t border-gray-800">
-                                <h4 class="text-2xl font-bold mb-6 neon-pink-text">OUR OFFICIAL SITE</h4>
-                                <p class="text-gray-300 mb-4">Coming soon: <span class="font-bold">www.agniscale.in</span></p>
-                                <p class="text-gray-400 text-sm">(Currently in development due to budget constraints)</p>
+                            <div class="mt-12 pt-10 border-t border-gray-100">
+                                <h4 class="text-xl font-bold mb-4">Our Official Site</h4>
+                                <p class="text-gray-600 mb-2">Coming soon: <span class="font-bold">www.agniscale.in</span></p>
+                                <p class="text-sm text-gray-500">(Currently in development due to budget constraints)</p>
                             </div>
                         </div>
                         
                         <div>
-                            <h3 class="text-4xl font-bold mb-8 gradient-text">SEND A MESSAGE</h3>
-                            <form id="contactForm" class="space-y-8">
+                            <h3 class="text-3xl font-bold mb-8">Send a Message</h3>
+                            <form id="contactForm" class="space-y-6">
                                 <div>
-                                    <input type="text" placeholder="YOUR NAME" class="w-full bg-black/50 border border-gray-700 rounded-2xl px-6 py-5 text-white focus:outline-none focus:border-cyan-500 transition-colors text-lg font-bold placeholder-gray-500">
+                                    <input type="text" placeholder="Your Name" class="form-input" id="nameInput">
                                 </div>
                                 <div>
-                                    <input type="email" placeholder="YOUR EMAIL" class="w-full bg-black/50 border border-gray-700 rounded-2xl px-6 py-5 text-white focus:outline-none focus:border-cyan-500 transition-colors text-lg font-bold placeholder-gray-500">
+                                    <input type="email" placeholder="Your Email" class="form-input" id="emailInput">
                                 </div>
                                 <div>
-                                    <textarea placeholder="YOUR MESSAGE" rows="6" class="w-full bg-black/50 border border-gray-700 rounded-2xl px-6 py-5 text-white focus:outline-none focus:border-cyan-500 transition-colors text-lg font-bold placeholder-gray-500"></textarea>
+                                    <textarea placeholder="Your Message" class="form-textarea" id="messageInput"></textarea>
                                 </div>
-                                <button type="submit" class="btn-explosion w-full bg-gradient-to-r from-cyan-500 to-pink-600 text-white font-bold py-6 rounded-2xl text-xl hover:shadow-[0_0_50px_rgba(255,0,255,0.5)] transition-all duration-300 relative overflow-hidden group">
-                                    <span class="relative z-10">SEND MESSAGE</span>
-                                    <div class="absolute inset-0 bg-gradient-to-r from-cyan-600 to-pink-700 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                                <button type="submit" class="btn-primary w-full">
+                                    Send Message
                                 </button>
                             </form>
                         </div>
@@ -786,58 +869,55 @@
     </section>
     
     <!-- Footer -->
-    <footer class="py-12 px-6 border-t border-gray-800">
-        <div class="container mx-auto">
+    <footer class="py-12 border-t border-gray-200">
+        <div class="container mx-auto container-padding">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="flex items-center space-x-4 mb-8 md:mb-0">
-                    <div class="relative">
-                        <img src="https://d1yei2z3i6k35z.cloudfront.net/13184094/693dc7fb18258_unnamed2.jpg" 
-                             alt="Agniscale Logo" 
-                             class="w-12 h-12 rounded-full border-2 border-cyan-300 pulse">
-                        <div class="absolute -top-1 -right-1 w-4 h-4 bg-neon-pink rounded-full"></div>
-                    </div>
+                    <img src="https://d1yei2z3i6k35z.cloudfront.net/13184094/693dc7fb18258_unnamed2.jpg" 
+                         alt="Agniscale Logo" 
+                         class="logo-img">
                     <div>
-                        <h2 class="text-2xl font-bold logo-font neon-text">AGNI<span class="neon-pink-text">SCALE</span></h2>
-                        <p class="text-xs text-gray-400 tracking-widest">MARKETING & ADVERTISING AGENCY</p>
+                        <h2 class="text-xl font-bold logo-font gradient-text">AGNISCALE</h2>
+                        <p class="text-xs text-gray-500">Marketing & Advertising Agency</p>
                     </div>
                 </div>
                 
                 <div class="text-center md:text-right">
-                    <p class="text-gray-400 mb-3">© 2023 AGNISCALE. ALL RIGHTS RESERVED.</p>
-                    <p class="text-gray-500 text-sm font-bold tracking-widest">SCALE ✧ STRATEGY ✧ SUCCESS</p>
+                    <p class="text-gray-600 mb-2">© 2023 Agniscale. All rights reserved.</p>
+                    <p class="text-gray-500 text-sm font-medium">Scale ✧ Strategy ✧ Success</p>
                 </div>
             </div>
         </div>
     </footer>
     
     <!-- Modal for contact form -->
-    <div id="messageModal" class="modal-overlay">
+    <div class="modal-overlay" id="messageModal">
         <div class="modal-content">
             <div class="text-center">
-                <div class="text-5xl mb-6">
-                    <i class="fas fa-exclamation-triangle text-yellow-400"></i>
+                <div class="text-5xl mb-6 text-yellow-500">
+                    <i class="fas fa-exclamation-circle"></i>
                 </div>
-                <h3 class="text-3xl font-bold mb-6 gradient-text">SERVER NOTICE</h3>
-                <p class="text-gray-300 text-lg mb-8">
-                    This site doesn't support server and database functionality yet. Our official site will be <span class="font-bold text-cyan-300">www.agniscale.in</span> (not published due to budget constraints).
+                <h3 class="text-2xl font-bold mb-6">Server Notice</h3>
+                <p class="text-gray-600 mb-6">
+                    This site doesn't support server and database functionality yet. Our official site will be <span class="font-bold text-primary">www.agniscale.in</span> (not published due to budget constraints).
                 </p>
-                <p class="text-gray-300 text-lg mb-10">
+                <p class="text-gray-600 mb-8">
                     You can copy this message and send it directly on Instagram:
                 </p>
                 
-                <div class="bg-black/50 border border-cyan-500/30 rounded-2xl p-6 mb-10 text-left">
-                    <p id="messageToCopy" class="text-gray-300 font-mono">
+                <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-8 text-left">
+                    <p id="messageToCopy" class="text-gray-700 font-medium">
                         Hi Agniscale team! I'm interested in your services. Please contact me for a consultation regarding [Your Service Needs]. My details: [Your Name], [Your Email/Contact].
                     </p>
                 </div>
                 
-                <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                    <button id="copyBtn" class="btn-explosion bg-gradient-to-r from-cyan-500 to-cyan-700 text-white font-bold py-4 px-10 rounded-full hover:shadow-[0_0_30px_rgba(0,247,255,0.7)] transition-all duration-300 flex items-center justify-center gap-3">
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button id="copyBtn" class="btn-primary flex items-center justify-center gap-3">
                         <i class="fas fa-copy"></i>
-                        COPY MESSAGE
+                        Copy Message
                     </button>
-                    <button id="cancelBtn" class="bg-gradient-to-r from-gray-700 to-gray-900 text-white font-bold py-4 px-10 rounded-full border border-gray-600 hover:border-gray-400 transition-all duration-300">
-                        CANCEL
+                    <button id="cancelBtn" class="btn-outline">
+                        Cancel
                     </button>
                 </div>
             </div>
@@ -845,40 +925,43 @@
     </div>
     
     <!-- Scroll to Top Button -->
-    <button id="scrollToTop" class="scroll-to-top cursor-pointer relative after:content-['SCROLL_TO_TOP'] after:text-white after:absolute after:text-nowrap after:scale-0 hover:after:scale-100 after:duration-200 w-16 h-16 rounded-full border-4 border-cyan-300 bg-black flex items-center justify-center duration-300 hover:rounded-[50px] hover:w-44 group/button overflow-hidden active:scale-90 hover:shadow-[0_0_30px_rgba(0,247,255,0.7)]">
-        <svg class="w-5 fill-white delay-50 duration-200 group-hover/button:-translate-y-12" viewBox="0 0 384 512">
-            <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"></path>
-        </svg>
+    <button id="scrollToTop" class="scroll-to-top">
+        <i class="fas fa-chevron-up"></i>
     </button>
     
     <script>
-        // Particles Animation
-        function createParticles() {
-            const container = document.getElementById('particles-container');
-            const particleCount = 50;
-            
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.classList.add('particle');
-                
-                // Random properties
-                const size = Math.random() * 5 + 2;
-                const posX = Math.random() * 100;
-                const posY = Math.random() * 100;
-                const color = Math.random() > 0.66 ? '#00f7ff' : Math.random() > 0.33 ? '#ff00ff' : '#9d00ff';
-                const duration = Math.random() * 20 + 10;
-                const delay = Math.random() * 5;
-                
-                particle.style.width = `${size}px`;
-                particle.style.height = `${size}px`;
-                particle.style.left = `${posX}vw`;
-                particle.style.top = `${posY}vh`;
-                particle.style.background = color;
-                particle.style.animation = `floating ${duration}s ease-in-out ${delay}s infinite`;
-                
-                container.appendChild(particle);
-            }
+        // Mobile menu functionality
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+        
+        function toggleMobileMenu() {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            mobileOverlay.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
         }
+        
+        function closeMobileMenu() {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            mobileOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        hamburger.addEventListener('click', toggleMobileMenu);
+        mobileOverlay.addEventListener('click', closeMobileMenu);
+        
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
         
         // Scroll to top functionality
         const scrollToTopBtn = document.getElementById('scrollToTop');
@@ -912,6 +995,9 @@
                         top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
                     });
+                    
+                    // Close mobile menu if open
+                    closeMobileMenu();
                 }
             });
         });
@@ -922,14 +1008,17 @@
         const copyBtn = document.getElementById('copyBtn');
         const cancelBtn = document.getElementById('cancelBtn');
         const messageToCopy = document.getElementById('messageToCopy');
+        const nameInput = document.getElementById('nameInput');
+        const emailInput = document.getElementById('emailInput');
+        const messageInput = document.getElementById('messageInput');
         
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
             // Get form data to personalize message
-            const name = this.querySelector('input[type="text"]').value || '[Your Name]';
-            const email = this.querySelector('input[type="email"]').value || '[Your Email/Contact]';
-            const message = this.querySelector('textarea').value || '[Your Service Needs]';
+            const name = nameInput.value || '[Your Name]';
+            const email = emailInput.value || '[Your Email/Contact]';
+            const message = messageInput.value || '[Your Service Needs]';
             
             // Update the message to copy with form data
             const personalizedMessage = `Hi Agniscale team! I'm interested in your services. Please contact me for a consultation regarding ${message}. My details: ${name}, ${email}.`;
@@ -937,6 +1026,7 @@
             
             // Show modal
             modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
             
             // Reset form
             this.reset();
@@ -945,140 +1035,59 @@
         copyBtn.addEventListener('click', function() {
             navigator.clipboard.writeText(messageToCopy.textContent).then(() => {
                 // Change button text temporarily
-                const originalText = copyBtn.innerHTML;
-                copyBtn.innerHTML = '<i class="fas fa-check"></i> COPIED!';
-                copyBtn.classList.remove('from-cyan-500', 'to-cyan-700');
-                copyBtn.classList.add('from-green-500', 'to-green-700');
+                const originalHtml = copyBtn.innerHTML;
+                copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                copyBtn.style.background = 'linear-gradient(135deg, #10b981, #34d399)';
                 
                 setTimeout(() => {
-                    copyBtn.innerHTML = originalText;
-                    copyBtn.classList.remove('from-green-500', 'to-green-700');
-                    copyBtn.classList.add('from-cyan-500', 'to-cyan-700');
+                    copyBtn.innerHTML = originalHtml;
+                    copyBtn.style.background = '';
                 }, 2000);
             });
         });
         
         cancelBtn.addEventListener('click', function() {
             modal.classList.remove('active');
+            document.body.style.overflow = '';
         });
         
         // Close modal when clicking outside
         modal.addEventListener('click', function(e) {
             if (e.target === modal) {
                 modal.classList.remove('active');
+                document.body.style.overflow = '';
             }
         });
         
-        // Add explosion effect to buttons
-        document.querySelectorAll('.btn-explosion').forEach(button => {
-            button.addEventListener('click', function(e) {
-                // Create explosion effect
-                const explosion = document.createElement('div');
-                explosion.style.position = 'absolute';
-                explosion.style.width = '10px';
-                explosion.style.height = '10px';
-                explosion.style.borderRadius = '50%';
-                explosion.style.background = 'radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(0,247,255,0) 70%)';
-                explosion.style.pointerEvents = 'none';
-                
-                const rect = this.getBoundingClientRect();
-                explosion.style.left = `${e.clientX - rect.left}px`;
-                explosion.style.top = `${e.clientY - rect.top}px`;
-                
-                this.appendChild(explosion);
-                
-                // Animate explosion
-                explosion.animate([
-                    { transform: 'scale(0)', opacity: 1 },
-                    { transform: 'scale(30)', opacity: 0 }
-                ], {
-                    duration: 500,
-                    easing: 'ease-out'
-                });
-                
-                // Remove explosion after animation
-                setTimeout(() => {
-                    explosion.remove();
-                }, 500);
-            });
-        });
+        // Fade in animation on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
         
-        // Initialize on load
-        window.addEventListener('load', function() {
-            createParticles();
-            
-            // Add staggered animation to elements
-            document.querySelectorAll('.stagger-animation').forEach(container => {
-                container.classList.add('stagger-animation');
-            });
-            
-            // Add glitch effect to headings periodically
-            setInterval(() => {
-                document.querySelectorAll('.glitch-text').forEach(text => {
-                    text.classList.add('animate__animated', 'animate__headShake');
-                    setTimeout(() => {
-                        text.classList.remove('animate__animated', 'animate__headShake');
-                    }, 1000);
-                });
-            }, 5000);
-        });
-        
-        // Add keyboard shortcuts
-        document.addEventListener('keydown', function(e) {
-            // Escape closes modal
-            if (e.key === 'Escape' && modal.classList.contains('active')) {
-                modal.classList.remove('active');
-            }
-            
-            // Spacebar scrolls down
-            if (e.key === ' ' && !e.target.matches('input, textarea')) {
-                e.preventDefault();
-                window.scrollBy({
-                    top: window.innerHeight * 0.8,
-                    behavior: 'smooth'
-                });
-            }
-        });
-        
-        // Add mouse trail effect
-        let mouseX = 0, mouseY = 0;
-        let trail = [];
-        const trailLength = 10;
-        
-        document.addEventListener('mousemove', function(e) {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-            
-            // Create trail element
-            const dot = document.createElement('div');
-            dot.style.position = 'fixed';
-            dot.style.left = `${mouseX}px`;
-            dot.style.top = `${mouseY}px`;
-            dot.style.width = '4px';
-            dot.style.height = '4px';
-            dot.style.borderRadius = '50%';
-            dot.style.background = 'rgba(0, 247, 255, 0.7)';
-            dot.style.pointerEvents = 'none';
-            dot.style.zIndex = '9998';
-            document.body.appendChild(dot);
-            
-            // Add to trail array
-            trail.push(dot);
-            
-            // Remove oldest dot if trail is too long
-            if (trail.length > trailLength) {
-                const oldDot = trail.shift();
-                if (oldDot && oldDot.parentNode) {
-                    oldDot.parentNode.removeChild(oldDot);
+        function checkFade() {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
                 }
+            });
+        }
+        
+        // Initial check
+        checkFade();
+        
+        // Check on scroll
+        window.addEventListener('scroll', checkFade);
+        
+        // Set current year in footer
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearSpan = document.getElementById('currentYear');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
             }
             
-            // Fade out trail dots
-            trail.forEach((dot, index) => {
-                const opacity = (index + 1) / trailLength;
-                dot.style.opacity = opacity;
-                dot.style.transform = `scale(${opacity})`;
-            });
+            // Initialize all animations
+            checkFade();
         });
     </script>
 </body>
